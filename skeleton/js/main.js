@@ -8,8 +8,3 @@ $( () => {
   console.log(board);
   const view = new View(game, board);
 });
-
-$("li").on("mouseover", event => {
-  let target = $(event.currentTarget);
-  target.attr("style", "background-color: yellow");
-});

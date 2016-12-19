@@ -58,6 +58,8 @@ class Game {
     });
   }
 
+  // ['X', 'O']
+
   swapTurn() {
     if (this.currentPlayer === Board.marks[0]) {
       this.currentPlayer = Board.marks[1];
