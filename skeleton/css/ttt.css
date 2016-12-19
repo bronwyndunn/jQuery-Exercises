@@ -1,0 +1,29 @@
+
+
+ul {
+  width: 400px;
+  height: 400px;
+  background-color: pink;
+  border-width: medium;
+  border-color: black;
+  border-style: solid;
+}
+
+li {
+  list-style: none;
+  float: left;
+  background-color: gray;
+  width: 100px;
+  height: 100px;
+  border-width: medium;
+  border-color: black;
+  border-style: solid;
+}
+
+.group:after {
+  clear:both;
+}
+
+li:hover {
+  background-color: yellow;
+}
