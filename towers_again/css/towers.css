@@ -1,0 +1,47 @@
+ body, ul, li {
+   margin: 0;
+   padding: 0;
+   border: 0;
+
+ }
+
+ li {
+   background: transparent;
+   list-style: none;
+   height: 30px;
+   width: 84px;
+  margin: 6px;
+ }
+
+ ul {
+  background-color: lightgreen;
+  margin: 8px;
+ }
+
+.disk1 {
+  background-color: lightgray;
+  -webkit-border-radius: 20px;
+  height: 30px;
+  width: 40px;
+  margin: 5px auto;
+ }
+
+ .disk2 {
+   background-color: lightgray;
+  -webkit-border-radius: 20px;
+  height: 30px;
+  width: 60px;
+  margin: 5px auto;
+ }
+
+ .disk3 {
+   background-color: lightgray;
+  -webkit-border-radius: 20px;
+  height: 30px;
+  width: 80px;
+  margin: 5px auto;
+ }
+
+ body {
+   display: flex;
+ }
