@@ -4,6 +4,7 @@ class View {
     this.$el = el;
     this.setupTowers();
     this.render();
+    this.clickTower();
 
     //Install click handler on each pile
       //clickTower helper method
@@ -12,6 +13,7 @@ class View {
   setupTowers() {
     for (var i = 0; i < 3; i++) {
       const $ul = $("<ul></ul>");
+      $ul.data("pos", i);
       this.$el.append($ul);
       for (var j = 0; j < 3; j++) {
         const $li =  $("<li></li>");
@@ -46,6 +48,23 @@ class View {
       buildTower(this.game.towers[i], i);
     }
   }
+
+  clickTower() {
+    $('ul').on("click", event => {
+      let $currentTarget = $(event.currentTarget);
+      if (this.clickedTower !== undefined) {
+        this.game.move(this.clickedTower, $currentTarget.data("pos"));
+        this.clickedTower = undefined;
+        this.render();
+        if (this.game.isWon()) {
+          alert("You're the best! Wow!!!!");
+        }
+    }
+    else {
+      this.clickedTower = $currentTarget.data("pos");
+    }
+  });
+}
 }
 
 module.exports = View;
